@@ -1,0 +1,3 @@
+add_library(helper_functions helper_functions.cpp helper_functions.hpp)
+target_include_directories(helper_functions PUBLIC .)
+target_link_libraries(helper_functions definitions)

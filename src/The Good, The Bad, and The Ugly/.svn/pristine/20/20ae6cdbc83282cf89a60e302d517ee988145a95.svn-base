@@ -1,0 +1,2 @@
+add_executable(chess_engine MACOSX_BUNDLE main.cpp)
+target_link_libraries(chess_engine definitions chess_board helper_functions ysclass simplebitmap utility fslazywindow)
