@@ -1,0 +1,79 @@
+#include <iostream>
+#include <fssimplewindow.h> // For FsSubSecondTimer
+#include <meshlattice.h>
+#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
+#include <lattice.h>
+#include <algorithm>
+
+#include "ps7lib.h"
+
+std::vector <float> MakeSliceVertexArray(const YsShellExt &mesh)
+{
+	auto t0=FsSubSecondTimer();
+	std::vector <float> sliceVtx;
+
+	// You fill this part.
+
+	printf("%d milli seconds\n",(int)FsSubSecondTimer()-t0);
+	return sliceVtx;
+}
+
+
+#define USE_LATTICE
+
+
+std::vector <float> MakeRayIntersectionVertexArray(const YsShellExt &mesh)
+{
+	auto t0=FsSubSecondTimer();
+	std::vector <float> rayItscVtx;
+	
+	// You fill this part.
+
+	printf("%d milli seconds\n",(int)FsSubSecondTimer()-t0);
+	return rayItscVtx;
+}
+
+void Paint(YsShellExt &mesh,YsShell::PolygonHandle from,const double angleTolerance)
+{
+	std::vector<YsShell::PolygonHandle> polyg;
+
+	if(from == NULL)
+	{
+		printf("ERROR : NULL POINTER");
+		return;
+	}
+	polyg.push_back(from);
+	mesh.SetPolygonColor(from,YsRed());
+	YsVec3 normalFrom = mesh.GetNormal(from);
+
+	for(int index = 0; index < polyg.size(); ++index)
+	{
+
+	auto nEdge = mesh.GetPolygonNumVertex(polyg[index]);
+		for(int i = 0; i < nEdge; ++i)
+		{
+			auto neigHd = mesh.GetNeighborPolygon(polyg[index],i);
+			if(neigHd != NULL)
+			{
+				std::cout << nEdge << std::endl;
+				YsVec3 nei_norm = mesh.GetNormal(neigHd);
+
+				double angle_cos = normalFrom * nei_norm;
+				double tolerance = cos(angleTolerance * YsPi /180.f);
+				//auto angle = mesh.ComputeDihedralAngle(from,neigHd);
+				// std::cout << angle << std::endl;
+				// std::cout << "here" << std::endl;
+				if((angle_cos >= tolerance) && polyg.end() == std::find(polyg.begin(), polyg.end(),neigHd))
+				{
+					mesh.SetPolygonColor(neigHd,YsRed());
+					polyg.push_back(neigHd);
+					// Paint(mesh,neigHd,angleTolerance);
+					// count++;
+					// std::cout << count << std::endl;
+				}
+			}
+		}
+	}
+}
