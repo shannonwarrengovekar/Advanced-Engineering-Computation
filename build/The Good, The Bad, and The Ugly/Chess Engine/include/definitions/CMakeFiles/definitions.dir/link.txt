@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdefinitions.a  CMakeFiles/definitions.dir/definitions.cpp.o
+/usr/bin/ranlib libdefinitions.a

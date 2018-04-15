@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cerlab/24783/src/The Good, The Bad, and The Ugly/Chess Engine/include/definitions/./definitions.hpp
+array
+-
+
+/home/cerlab/24783/src/The Good, The Bad, and The Ugly/Chess Engine/include/helper_functions/helper_functions.cpp
+array
+-
+iostream
+-
+stdlib.h
+-
+definitions.hpp
+/home/cerlab/24783/src/The Good, The Bad, and The Ugly/Chess Engine/include/helper_functions/definitions.hpp
+helper_functions.hpp
+/home/cerlab/24783/src/The Good, The Bad, and The Ugly/Chess Engine/include/helper_functions/helper_functions.hpp
+
+/home/cerlab/24783/src/The Good, The Bad, and The Ugly/Chess Engine/include/helper_functions/helper_functions.hpp
+

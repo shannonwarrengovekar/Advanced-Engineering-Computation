@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/ps4_1.dir/main.cpp.o  -o ps4_1 ../../simplebitmap/libsimplebitmap.a ../../utility/libutility.a ../../../public/src/ysgebl/src/kernel/libgeblkernel.a ../../../public/src/ysglcpp/src/libysglcpp.a ../../../public/src/ysclass11/src/libysclass11.a ../../../public/src/ysclass/src/libysclass.a -lpthread -static-libstdc++ -static-libgcc 

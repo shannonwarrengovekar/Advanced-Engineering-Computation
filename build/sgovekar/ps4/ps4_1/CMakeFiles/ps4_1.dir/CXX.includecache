@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cerlab/24783/src/sgovekar/ps4/ps4_1/main.cpp
+iostream
+-
+stdio.h
+-
+fstream
+-
+simplebitmap.h
+/home/cerlab/24783/src/sgovekar/ps4/ps4_1/simplebitmap.h
+
+/home/cerlab/24783/src/sgovekar/simplebitmap/./simplebitmap.h
+stdio.h
+-
+simplebitmaptemplate.h
+/home/cerlab/24783/src/sgovekar/simplebitmap/./simplebitmaptemplate.h
+
+/home/cerlab/24783/src/sgovekar/simplebitmap/./simplebitmaptemplate.h
+

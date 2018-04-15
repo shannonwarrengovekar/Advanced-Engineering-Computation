@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfslazywindow.a  CMakeFiles/fslazywindow.dir/macosx_linux_win/fslazywindow.cpp.o CMakeFiles/fslazywindow.dir/fslazywindowcommon.cpp.o
+/usr/bin/ranlib libfslazywindow.a

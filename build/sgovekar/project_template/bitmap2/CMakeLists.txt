@@ -1,0 +1,2 @@
+add_executable(project_template MACOSX_BUNDLE main.cpp)
+target_link_libraries(project_template ysclass simplebitmap utility fslazywindow)
